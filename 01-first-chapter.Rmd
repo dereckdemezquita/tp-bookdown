@@ -1,0 +1,12 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 7, fig.height = 7, fig.align = "center")
+```
+
+# First chapter {#chp:first-chapter}
+
+A simple plot.
+
+```{r}
+plot(mtcars)
+```
+

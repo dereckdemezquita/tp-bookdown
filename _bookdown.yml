@@ -1,0 +1,6 @@
+new_session: true # K-M rendering model; all .Rmds have separate R sessions.
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+# before_chapter_script: "modules/_common.R"

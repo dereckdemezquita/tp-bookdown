@@ -1,0 +1,71 @@
+---
+title: "Template for bookdown"
+author: "Dereck de Mézquita"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+github-repo: "dereckdemezquita/bk-statistics-probability-with-R"
+documentclass: book
+output:
+  bookdown::gitbook:
+      config:
+        toc:
+          collapse: subsection
+          scroll_highlight: yes
+          before: null
+          after: null
+        toolbar:
+          position: fixed
+        edit: null
+        download: null
+        search: yes
+        fontsettings:
+          theme: night
+          family: serif
+          size: 2
+        sharing:
+          facebook: yes
+          github: yes
+          twitter: yes
+          linkedin: yes
+          weibo: no
+          instapaper: no
+          vk: yes
+          all: ['facebook', 'twitter', 'linkedin', 'weibo', 'instapaper']
+  #bookdown::pdf_book: default
+bibliography: [bib/citations.bib, bib/packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "A full statistics and probability with R programming book. Course material and subject matter inspired by traditional courses, all code demonstrations are my own."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 7, fig.height = 7, fig.align = "center")
+```
+
+<!-- If you need PDF output, uncomment bookdown::pdf_book above in YAML. You will need a LaTeX installation, e.g., https://yihui.name/tinytex/ -->
+
+# Introduction {#chp:introduction}
+
+This is a simple and basic template for quickly creating working repos that are set to run and start writing a book or large document with R. Feel free to reference the original bookdown documentation for more information on the syntax required to write a bookdown document: [bookdown.org](https://bookdown.org/yihui/bookdown/)
+
+## Session information
+ 
+This book is written in **R-Markdown** with the **bookdown** package.
+
+```{r session-information}
+sessionInfo()
+```
+
+<!-- ## Automatically build book script -->
+
+```{r build-book, eval=FALSE, include=FALSE, warning=FALSE, message=FALSE}
+for (i in 1:100) {
+  tryCatch({
+    servr::daemon_stop(i)
+  }, error = function(e) {
+    message("Error: ", e)
+  })
+}
+bookdown::serve_book(dir = ".", output_dir = "_book", preview = TRUE, in_session = TRUE, quiet = TRUE)
+```
+ 
