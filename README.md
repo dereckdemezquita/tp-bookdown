@@ -15,7 +15,7 @@ The following are set to run.
 
 In order to build the book continously run the script found in the `index.Rmd`:
 
-```{r build-book, eval=FALSE, include=FALSE, warning=FALSE, message=FALSE}
+```{r}
 for (i in 1:100) {
   tryCatch({
     servr::daemon_stop(i)
